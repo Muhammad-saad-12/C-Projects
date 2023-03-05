@@ -1,0 +1,65 @@
+#include<iostream>
+using namespace std;
+int menu(){
+    int choice;
+    cout<<"1.Addition"<<endl;
+    cout<<"2.Subtraction"<<endl;
+    cout<<"3.Multiplication"<<endl;
+    cout<<"4.Division"<<endl;
+    cout<<"5.Exit"<<endl;
+    cout<<"Press any number b/w(1-5):"<<endl;
+    cin>>choice;
+    return choice;
+}
+int add(int n1,int n2){
+    int add;
+    add=n1+n2;
+    return add;
+}
+int sub(int n1,int n2){
+int sub;
+sub=abs(n1-n2);
+return sub;
+}
+int mul(int n1,int n2){
+    int m;
+    m=n1*n2;
+    return m;
+}
+int divide(int n1,int n2){
+int d;
+d=abs(n1/n2);
+return d;
+}
+int main()
+{
+    int cho,n1,n2,a,s,m,d;
+cout<<"Enter 2 numbers:";
+cin>>n1>>n2;
+while(1){
+cho=menu();
+switch(cho){
+    case 1:
+a=add(n1,n2);
+cout<<"Additon:"<<a<<endl;
+break;
+case 2:
+s=sub(n1,n2);
+cout<<"Subtraction:"<<s<<endl;
+break;
+case 3:
+m=mul(n1,n2);
+cout<<"Multiplication:"<<m<<endl;
+break;
+case 4:
+d=divide(n1,n2);
+cout<<"Division:"<<d<<endl;
+break;
+case 5:
+system("pause");
+exit(0);
+default:
+cout<<"Invalid number try again"<<endl;
+}
+}
+}
